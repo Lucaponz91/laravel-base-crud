@@ -3,6 +3,10 @@ elenco fumetti
 
 @section('content')
 {{-- @dump($comics) --}}
+<div class="add_container">
+    <a href="{{route('comics.create')}}">Aggiungi Fumetto</a>
+
+</div>
 <div class="main_container">
     <div>
         <div class="card_container">

@@ -104,6 +104,11 @@
   color: #0282F9;
 }
 
+.show_main {
+  display: flex;
+  flex-direction: row;
+}
+
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
