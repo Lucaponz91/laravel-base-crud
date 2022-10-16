@@ -1,0 +1,90 @@
+.footer_store_buy{
+    height: 160px;
+    background-color: #0282F9;
+    display: flex;
+    justify-content: center;
+    
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    li{
+        color: white;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        img{
+            // width: 60px;
+            max-height: 55px;
+        }
+        span{
+            padding: 10px;
+        }
+    }
+}
+.footer_dc_links{
+    height: 370px;
+    background-image: url("../img/footer-bg.jpg");
+    // background-image: url("{{ asset('assets/img/background.png') }}") ;
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer_links_left{
+        display: flex;
+        flex-direction: row;
+    }
+    ul{
+        text-align: left;
+    }
+    
+    span{
+        color: white;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        
+    }
+    li{
+        color: lightgray;
+        text-align: left;
+        padding: 5px 0px;
+    }
+    .links_middle{
+        padding-inline: 35px;
+    }
+}
+.footer_logo_right{
+    background-image: url(@/assets/dc-logo-bg.png);
+    height: 100%;
+    width: 43%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.signup_n_socials{
+    background-color: #303030;
+    height: 108px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    span{
+        color: white;
+        padding: 10px;
+        border: 2px solid blue;
+    }
+    .socials{
+        *{
+            padding: 12px;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            font-weight: 700;
+            color: #0282F9;
+        }
+    }
+}

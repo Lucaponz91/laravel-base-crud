@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <title>Document</title>
+    <title>@yield('metaTitle')</title>
 </head>
 <body>
     @include('partials.header')
