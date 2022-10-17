@@ -1,4 +1,8 @@
 .show_main{
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
+}
+.ad{
+    height: 100%;
 }
