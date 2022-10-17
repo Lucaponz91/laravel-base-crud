@@ -37,7 +37,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         // dump($request->all());
-        $params = $request->all();
+        // $params = $request->all();
         // $c = new Comic();
         // $c->fill($params);
         // // $c->title = $params['title'];
@@ -49,6 +49,16 @@ class ComicController extends Controller
         // // $c->type = $params['type'];
         
         // $c->save();
+        $params = $request->validate([
+            'title' => 'required|max:255',
+            'description' =>'required|max:255',
+            'thumb' =>'required|max:255',
+            'price' =>'required|max:255',
+            'series' =>'required|max:255',
+            'sale_date' =>'required',
+            'type' =>'required|max:255',
+        ]);
+
         $c = Comic::create($params);
         return redirect()-> route('comics.show', $c);
     }
@@ -73,7 +83,8 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -85,7 +96,19 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $params = $request->validate([
+            
+            'title' => 'required|max:255',
+            'description' =>'required|max:255',
+            'thumb' =>'required|max:255',
+            'price' =>'required|max:255',
+            'series' =>'required|max:255',
+            'sale_date' =>'required',
+            'type' =>'required|max:255',
+        ]);
+        $comic->update($params);
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
@@ -96,6 +119,8 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $comic->delete();
+        redirect()->route('comics.index');
     }
 }
