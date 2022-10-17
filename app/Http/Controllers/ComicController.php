@@ -50,7 +50,7 @@ class ComicController extends Controller
         
         // $c->save();
         $c = Comic::create($params);
-        return redirect()-> route('comic.show', $c);
+        return redirect()-> route('comics.show', $c);
     }
 
     /**
